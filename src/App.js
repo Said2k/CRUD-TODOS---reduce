@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import AddTodos from './components/AddTodos';
+import EditUsers from './components/EditTodos/EditUsers';
+import UsersList from './components/Users/UsersList';
+import ContextComp from './ContextComp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ContextComp>
+        <BrowserRouter>
+        <Routes>
+          <Route path='add-todos' element={<AddTodos/>}/>
+          <Route path='todos' element={<UsersList/>}/>
+          <Route path='edit-user/:id' element={<EditUsers/>}/>
+    </Routes>
+    </BrowserRouter>
+      </ContextComp>
+     
     </div>
   );
 }

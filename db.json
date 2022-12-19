@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "name": "Said",
+      "surname": "Lans",
+      "phone": "999",
+      "id": 1
+    },
+    {
+      "name": "Mufasa",
+      "surname": "Maga",
+      "phone": "555",
+      "id": 3
+    },
+    {
+      "name": "Vaha",
+      "surname": "Vahavich",
+      "phone": "0000",
+      "id": 4
+    }
+  ]
+}
